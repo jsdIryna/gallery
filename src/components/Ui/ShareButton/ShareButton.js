@@ -2,7 +2,7 @@ import React from "react";
 import { FiShare } from "react-icons/fi";
 
 const ShareButton = ({ link, subClassName }) => (
-  <a href={link} target="_blank" className={`${subClassName} share`}>
+  <a href={link} target="_blank" className={`${subClassName} share`} rel="noreferrer">
     <FiShare />
   </a>
 );

@@ -12,10 +12,19 @@ const AlbumDetail = () => {
   useEffect(() => {
     const albumData = albums.find(({ id }) => id === +albumId);
     setCurrentAlbum(albumData);
-  }, [albums]);
+  }, [albums, albumId]);
 
   return (
-    <>{currentAlbum.content && <Gallery hideAddAction hideLikeAction removeAction images={currentAlbum.content} />}</>
+    <>
+      {currentAlbum.content && (
+        <Gallery
+          hideAddAction
+          hideLikeAction
+          removeAction
+          images={currentAlbum.content}
+        />
+      )}
+    </>
   );
 };
 
